@@ -16,9 +16,6 @@ module.exports = {
         'yellow': '#FECA1B',
         'light-yellow': '#FEE180',
       },
-      dropShadow: {
-        'custom': '5px 5px 20px 10px rgba(0, 0, 0, 0.25)',
-      }
     },
   },
   plugins: [],

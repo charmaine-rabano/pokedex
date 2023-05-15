@@ -5,7 +5,7 @@ export default function SearchFunction({ handleSearch }) {
   const [input, setInput] = useState("");
 
   return (
-    <div className="flex flex-row gap-2 justify-between items-center bg-off-white w-[400px] rounded-3xl">
+    <div className="flex flex-row gap-2 justify-between items-center bg-off-white w-[360px] rounded-3xl">
       <input
         value={input}
         onChange={(e) => setInput(e.target.value)}

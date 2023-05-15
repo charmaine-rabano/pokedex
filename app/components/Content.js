@@ -51,7 +51,7 @@ export default function Content() {
 
   useEffect(() => {
     getAllPokemon();
-  });
+  }, []);
 
   return (
     <>

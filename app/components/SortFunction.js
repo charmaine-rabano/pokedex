@@ -4,8 +4,9 @@ import Button from "./Button";
 export default function SortFunction({ handleSort }) {
   const [sortInput, setSortInput] = useState("id_asc");
   return (
-    <div className="flex flex-row justify-between items-center gap-2 bg-off-white w-[400px] rounded-3xl">
+    <div className="flex flex-row justify-between items-center gap-2 bg-off-white w-[360px] rounded-3xl">
       <select
+        id="sort"
         value={sortInput}
         onChange={(e) => setSortInput(e.target.value)}
         className="w-full h-full rounded-3xl bg-off-white p-3"

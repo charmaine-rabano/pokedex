@@ -15,15 +15,15 @@ export default function ViewAll({ data, handleSort, setSelected, onLoad }) {
     setSearchInput(input);
   }
   return (
-    <div className="flex flex-col items-center gap-10 py-10">
-      <div className="flex flex-row gap-6">
+    <div className="flex flex-col items-center gap-10 py-10 w-full">
+      <div className="flex flex-col md:flex-row gap-6 items-center">
         <SortFunction handleSort={handleSort} />
         <SearchFunction handleSearch={handleSearch} />
       </div>
       {searchInput && (
         <SearchResult searchResult={searchResult} setSelected={setSelected} />
       )}
-      <div className="flex flex-row flex-wrap justify-center">
+      <div className="flex flex-row flex-wrap justify-center items-center w-full">
         {data.map((p) => {
           return <CardView key={p.id} pokemon={p} setSelected={setSelected} />;
         })}
