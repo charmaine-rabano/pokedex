@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import ViewAll from "./ViewAll";
 import DetailView from "./DetailView";
+import sortPokemonData from "../utils/sortPokemonData";
 
 export default function Content() {
   const [allPokemon, setAllPokemon] = useState([]);
@@ -15,21 +16,6 @@ export default function Content() {
   function sortAllPokemon(sortInput) {
     setSorting(sortInput);
     setAllPokemon((prev) => sortPokemonData(prev, sortInput));
-  }
-
-  function sortPokemonData(data, sorting) {
-    switch (sorting) {
-      case "id_asc":
-        return data.sort((a, b) => a.id - b.id);
-      case "id_desc":
-        return data.sort((a, b) => b.id - a.id);
-      case "name_az":
-        return data.sort((a, b) => a.name.localeCompare(b.name));
-      case "name_za":
-        return data.sort((a, b) => b.name.localeCompare(a.name));
-      default:
-        return data.sort((a, b) => a.id - b.id);
-    }
   }
 
   async function getAllPokemon() {
